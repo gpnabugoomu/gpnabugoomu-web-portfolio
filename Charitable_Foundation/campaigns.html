@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gideon Cares Foundation — Campaigns</title>
+  <meta name="description" content="Gideon Cares Foundation — view active fundraising campaigns and progress." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="home.html" aria-label="Gideon Cares Foundation">
+        <span class="brand-mark" aria-hidden="true">GC</span>
+        <span class="brand-text">
+          <span class="brand-title">Gideon Cares</span>
+          <span class="brand-subtitle">Foundation</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="campaigns.html" class="nav-link">Campaigns</a>
+        <a href="stories.html" class="nav-link">Impact Stories</a>
+        <a href="volunteer.html" class="nav-link">Volunteer Portal</a>
+        <a href="donate.html" class="nav-link nav-cta">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="campaigns">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Active Campaigns</h2>
+            <p>Clear goals, live-style progress, and donor-ready updates.</p>
+          </div>
+          <div class="section-tools">
+            <label class="search">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="campaignSearch" type="search" placeholder="Search campaigns" autocomplete="off" />
+            </label>
+          </div>
+        </div>
+
+        <div class="grid-cards" id="campaignList" aria-live="polite">
+          <!-- Rendered by JS -->
+        </div>
+
+        <template id="campaignCardTemplate">
+          <article class="campaign-card">
+            <div class="campaign-top">
+              <div>
+                <h3 class="campaign-title">Campaign name</h3>
+                <div class="campaign-meta">
+                  <span class="campaign-tag">Health</span>
+                  <span class="campaign-tag">Food</span>
+                  <span class="campaign-status">In progress</span>
+                </div>
+              </div>
+              <div class="campaign-amounts">
+                <div>
+                  <div class="amount-label">Raised</div>
+                  <div class="amount-value campaign-raised">$0</div>
+                </div>
+                <div>
+                  <div class="amount-label">Goal</div>
+                  <div class="amount-value campaign-goal">$0</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="progress progress--campaign" aria-label="Fundraising progress">
+              <div class="progress-bar campaign-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+            </div>
+            <div class="progress-meta">
+              <span class="campaign-percent">0% funded</span>
+              <span class="campaign-remaining">$0 remaining</span>
+            </div>
+
+            <div class="campaign-bottom">
+              <div class="campaign-blurb">Short description of what this campaign supports.</div>
+              <div class="campaign-actions">
+                <a class="btn btn-ghost" href="donate.html" data-donate-link>Donate to this</a>
+                <button class="btn btn-link" type="button" data-details>Details</button>
+              </div>
+            </div>
+
+            <dialog class="modal" data-modal>
+              <form method="dialog" class="modal-inner" aria-label="Campaign details">
+                <div class="modal-head">
+                  <h3 data-modal-title>Details</h3>
+                  <button class="icon-btn" type="submit" aria-label="Close">✕</button>
+                </div>
+                <div class="modal-body">
+                  <p data-modal-description>...</p>
+                  <ul class="modal-list">
+                    <li><strong>Raised:</strong> <span data-modal-raised></span></li>
+                    <li><strong>Goal:</strong> <span data-modal-goal></span></li>
+                    <li><strong>Status:</strong> <span data-modal-status></span></li>
+                  </ul>
+                  <div class="progress" aria-hidden="true">
+                    <div class="progress-bar" data-modal-bar></div>
+                  </div>
+                </div>
+                <div class="modal-foot">
+                  <button class="btn btn-primary" value="cancel" data-modal-donate>Donate</button>
+                </div>
+              </form>
+            </dialog>
+          </article>
+        </template>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">GC</span>
+          <div>
+            <div class="footer-title">Gideon Cares Foundation</div>
+            <div class="footer-sub">Transparent campaigns • Real impact</div>
+          </div>
+        </div>
+        <p class="footer-text">Built as a modern, responsive nonprofit website with PHP-ready forms.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <strong>Explore</strong>
+          <a href="home.html">Home</a>
+          <a href="campaigns.html">Campaigns</a>
+          <a href="stories.html">Impact Stories</a>
+          <a href="volunteer.html">Volunteer Portal</a>
+          <a href="donate.html">Donate</a>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:hello@gideoncares.org">hello@gideoncares.org</a>
+          <a href="#" onclick="return false;">+256 700 958 534</a>
+          <a href="#" onclick="return false;">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Gideon Cares Foundation. All rights reserved.</span>
+      <span class="muted">Designed with accessibility & mobile-first UX.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

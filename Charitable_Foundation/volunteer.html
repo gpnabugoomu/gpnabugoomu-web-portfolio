@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gideon Cares Foundation — Volunteer Portal</title>
+  <meta name="description" content="Gideon Cares Foundation — apply to volunteer and support community programs." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="home.html" aria-label="Gideon Cares Foundation">
+        <span class="brand-mark" aria-hidden="true">GC</span>
+        <span class="brand-text">
+          <span class="brand-title">Gideon Cares</span>
+          <span class="brand-subtitle">Foundation</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="campaigns.html" class="nav-link">Campaigns</a>
+        <a href="stories.html" class="nav-link">Impact Stories</a>
+        <a href="volunteer.html" class="nav-link">Volunteer Portal</a>
+        <a href="donate.html" class="nav-link nav-cta">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section" id="volunteer">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Volunteer Portal</h2>
+            <p>Apply to help with community programs and campaigns.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="panel">
+            <h3>Volunteer application</h3>
+            <p class="muted">This UI is ready for PHP submission.</p>
+
+            <form class="form" id="volunteerForm" novalidate>
+              <div class="field">
+                <label for="vName">Full name</label>
+                <input id="vName" name="name" type="text" required minlength="2" />
+                <small class="field-error" data-err-for="vName"></small>
+              </div>
+
+              <div class="field">
+                <label for="vEmail">Email</label>
+                <input id="vEmail" name="email" type="email" required />
+                <small class="field-error" data-err-for="vEmail"></small>
+              </div>
+
+              <div class="field">
+                <label for="vPhone">Phone (optional)</label>
+                <input id="vPhone" name="phone" type="tel" />
+              </div>
+
+              <div class="field">
+                <label for="vRole">I want to help with</label>
+                <select id="vRole" name="role" required>
+                  <option value="" selected disabled>Select an area</option>
+                  <option value="events">Events & logistics</option>
+                  <option value="outreach">Community outreach</option>
+                  <option value="mentorship">Mentorship & education</option>
+                  <option value="fundraising">Fundraising & campaigns</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="vMessage">Tell us about yourself</label>
+                <textarea id="vMessage" name="message" rows="4" required minlength="10"></textarea>
+                <small class="field-error" data-err-for="vMessage"></small>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Submit application</button>
+                <button class="btn btn-ghost" type="reset">Reset</button>
+              </div>
+
+              <div class="form-status" role="status" aria-live="polite" data-status></div>
+
+              <p class="fineprint">By submitting, you agree to be contacted about your volunteer application.</p>
+            </form>
+          </div>
+
+          <aside class="aside">
+            <div class="aside-card aside-card--sticky">
+              <h3>What happens next?</h3>
+              <ol class="steps">
+                <li><strong>Submit</strong> your application</li>
+                <li><strong>Review</strong> by our team</li>
+                <li><strong>Interview</strong> if needed</li>
+                <li><strong>Start</strong> with a clear role</li>
+              </ol>
+              <div class="aside-note">
+                <span class="dot" aria-hidden="true"></span>
+                <span>We aim to respond within 3–5 business days.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="volunteer-info">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Volunteer values</h2>
+            <p>Volunteer work is guided by respect, safety, and community care.</p>
+          </div>
+        </div>
+
+        <div class="grid-articles">
+          <article class="story-card">
+            <div class="story-top">
+              <span class="story-category">Respect</span>
+              <span class="story-date">People first</span>
+            </div>
+            <h3 class="story-title">Dignity in every interaction</h3>
+            <p class="story-text">We treat everyone with care—especially the families our programs serve.</p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-top">
+              <span class="story-category">Safety</span>
+              <span class="story-date">Trust</span>
+            </div>
+            <h3 class="story-title">Clear expectations</h3>
+            <p class="story-text">Roles and responsibilities are communicated so volunteers can work confidently.</p>
+          </article>
+
+          <article class="story-card">
+            <div class="story-top">
+              <span class="story-category">Impact</span>
+              <span class="story-date">Outcomes</span>
+            </div>
+            <h3 class="story-title">Helping create change</h3>
+            <p class="story-text">Volunteer support strengthens campaigns and the real outcomes donors make possible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">GC</span>
+          <div>
+            <div class="footer-title">Gideon Cares Foundation</div>
+            <div class="footer-sub">Transparent campaigns • Real impact</div>
+          </div>
+        </div>
+        <p class="footer-text">A modern, responsive nonprofit site with PHP-ready forms.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <strong>Explore</strong>
+          <a href="home.html">Home</a>
+          <a href="campaigns.html">Campaigns</a>
+          <a href="stories.html">Impact Stories</a>
+          <a href="volunteer.html">Volunteer Portal</a>
+          <a href="donate.html">Donate</a>
+        </div>
+        <div>
+          <strong>Contact</strong>
+          <a href="mailto:hello@gideoncares.org">hello@gideoncares.org</a>
+          <a href="#" onclick="return false;">+256 700 958 534</a>
+          <a href="#" onclick="return false;">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Gideon Cares Foundation. All rights reserved.</span>
+      <span class="muted">Designed with accessibility & mobile-first UX.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

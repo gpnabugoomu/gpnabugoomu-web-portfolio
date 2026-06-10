@@ -4,7 +4,7 @@ This is my personal web development portfolio. It contains websites and projects
 
 The goal of this portfolio is to show my ability to design and build simple, clean, and responsive websites that work well on both mobile and desktop devices.
 
----
+----------------------------------------------------------------------------------------------------------------------
 
 ## About Me
 
@@ -12,7 +12,7 @@ I am a web designer and IT support person with a Diploma in Computer Science and
 
 I am still improving my skills every day, especially in web design, UI/UX, and backend development.
 
----
+----------------------------------------------------------------------------------------------------------------------
 
 ## Projects Included
 
@@ -32,7 +32,7 @@ A church website that includes sermons, events, ministries, and general church i
 
 A personal podcast website where episodes and content are organized in a simple and user-friendly layout.
 
----
+----------------------------------------------------------------------------------------------------------------------
 
 ## Technologies Used
 
@@ -43,7 +43,7 @@ A personal podcast website where episodes and content are organized in a simple 
 * MySQL (basic use)
 * Git & GitHub
 
----
+----------------------------------------------------------------------------------------------------------------------
 
 ## What I Focus On
 
@@ -53,7 +53,7 @@ A personal podcast website where episodes and content are organized in a simple 
 * Turning ideas into real websites
 * Improving existing designs based on feedback
 
----
+----------------------------------------------------------------------------------------------------------------------
 
 ## Contact
 
@@ -61,9 +61,10 @@ If you would like to work with me or give feedback:
 
 Email: [gpnabugoomu@gmail.com](mailto:gpnabugoomu@gmail.com)
 Phone: +256 700 958 534
+Whatsapp: +256 700 958 534
 GitHub: [https://github.com/gpnabugoomu]
 
----
+----------------------------------------------------------------------------------------------------------------------
 
 ## Note
 
