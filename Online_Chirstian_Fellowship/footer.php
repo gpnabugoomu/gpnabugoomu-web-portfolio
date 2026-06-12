@@ -12,8 +12,7 @@
   </div>
 </footer>
 
-<!-- You might want to include a main.js here for nav toggle functionality -->
-<!-- <script src="main.js"></script> -->
+<script src="main.js"></script>
 
 </body>
 </html>
