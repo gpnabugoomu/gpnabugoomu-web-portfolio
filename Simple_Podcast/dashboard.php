@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_episode'])) {
     $duration = $_POST['duration'];
     
     // Simple File Handling
-    $target_dir = "../audio/";
+    $target_dir = __DIR__ . "/audio/"; // Use absolute path for file operations
     if (!is_dir($target_dir)) mkdir($target_dir, 0777, true);
     
     $file_name = basename($_FILES["audio_file"]["name"]);
@@ -88,7 +88,7 @@ $episodes = $pdo->query("SELECT * FROM episodes ORDER BY created_at DESC")->fetc
                     <td><?= date('M d, Y', strtotime($ep['created_at'])) ?></td>
                     <td><?= htmlspecialchars($ep['title']) ?></td>
                     <td><?= htmlspecialchars($ep['duration']) ?></td>
-                    <td><a href="../<?= $ep['audio_url'] ?>" target="_blank" style="color: #7C6CFF;">Play</a></td>
+                    <td><a href="/Simple_Podcast/<?= htmlspecialchars($ep['audio_url']) ?>" target="_blank" style="color: #7C6CFF;">Play</a></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

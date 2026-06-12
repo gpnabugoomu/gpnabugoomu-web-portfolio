@@ -1,0 +1,182 @@
+/**
+ * Gideon Cares Foundation - Modern Light Branding
+ */
+
+:root {
+    --bg: #f8fafc;
+    --panel: #ffffff;
+    --panel-border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+    
+    /* Foundation Branding: Teal & Trust Blue */
+    --brand: #0d9488;
+    --brand-dark: #0f766e;
+    --accent: #3b82f6;
+    
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --radius-sm: 6px;
+    
+    --container: 1100px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Admin & Layout --- */
+.main-header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--panel-border);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--brand);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Cards & Panels --- */
+.login-card, .form-section {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: var(--brand);
+    outline: none;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    background: var(--brand);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--brand-dark);
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: var(--text);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- Dashboard Styling --- */
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: var(--panel);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--panel-border);
+    overflow: hidden;
+}
+
+th {
+    background: #f8fafc;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--panel-border);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--panel-border);
+    font-size: 0.95rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.alert.success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* --- Foundation Landing Specifics --- */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(to bottom, #f0fdfa, var(--bg));
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #134e4a;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--brand);
+}

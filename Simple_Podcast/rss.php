@@ -10,8 +10,8 @@ header('Content-Type: application/rss+xml; charset=utf-8');
 require_once 'db.php';
 
 // Dynamically determine the base URL
-$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http";
-$baseUrl = $protocol . "://" . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+$baseUrl = $protocol . $_SERVER['HTTP_HOST'] . str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']);
 
 // 3. Fetch episodes from database
 $stmt = $pdo->query("SELECT * FROM episodes ORDER BY created_at DESC");

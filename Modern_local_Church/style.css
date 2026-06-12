@@ -1,0 +1,385 @@
+/**
+ * Modern Local Church - Branding Styles
+ * Matching the high-end dark UI of the Fellowship project
+ */
+
+:root {
+    --bg: #0A0E17;
+    --panel: rgba(255, 255, 255, 0.05);
+    --panel-border: rgba(255, 255, 255, 0.1);
+    --text: #F8F9FA;
+    --muted: rgba(248, 249, 250, 0.7);
+    
+    /* Gideon's Church Branding Colors */
+    --brand: #F2C94C;          /* Sophisticated Gold */
+    --brand-dark: #D4AF37;
+    --accent: #2F80ED;         /* Deep Blue */
+    
+    --radius-lg: 20px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    
+    --container: 1140px;
+    --shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 14, 23, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--panel-border);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+.logo-icon {
+    font-size: 1.6rem;
+    filter: drop-shadow(0 0 8px var(--brand));
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--brand);
+}
+
+.btn-cta {
+    background: var(--brand);
+    color: #000 !important;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 15px rgba(242, 201, 76, 0.3);
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 120px 0 80px;
+    background: radial-gradient(circle at 10% 20%, rgba(47, 128, 237, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, rgba(242, 201, 76, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(242, 201, 76, 0.1);
+    color: var(--brand);
+    border: 1px solid rgba(242, 201, 76, 0.2);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.highlight {
+    color: var(--brand);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--muted);
+    margin-bottom: 40px;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background: var(--brand);
+    color: #000;
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text);
+    padding: 16px 32px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid var(--panel-border);
+    transition: background 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(242, 201, 76, 0.4);
+}
+
+/* --- Grid & Cards --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 60px 0;
+}
+
+.time-card {
+    background: var(--panel);
+    border: 1px solid var(--panel-border);
+    padding: 35px;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.time-card:hover {
+    border-color: var(--brand);
+}
+
+.time-card h3 {
+    color: var(--brand);
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+/* --- Sermon Archive --- */
+.page-header {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sermon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.sermon-card {
+    background: var(--panel);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    border: 1px solid var(--panel-border);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.sermon-card:hover {
+    transform: translateY(-8px);
+}
+
+.sermon-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--brand);
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.sermon-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.sermon-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.watch-link {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Connect Form --- */
+.form-container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: var(--panel);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--panel-border);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--panel-border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-family: inherit;
+}
+
+.alert.success {
+    background: rgba(47, 201, 120, 0.1);
+    color: #27ae60;
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 25px;
+    border: 1px solid rgba(47, 201, 120, 0.2);
+    text-align: center;
+}
+
+/* --- Footer --- */
+.main-footer {
+    background: rgba(10, 14, 23, 0.8);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--panel-border);
+    padding: 30px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.main-footer p {
+    margin-bottom: 5px;
+}
+
+/* --- Mobile Navigation --- */
+.mobile-toggle {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 1100; /* Above nav links */
+}
+
+.mobile-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--bg);
+        padding-top: 100px; /* Space for header */
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-out;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        padding: 10px 0;
+        color: var(--text);
+    }
+
+    .nav-links .btn-cta {
+        margin-top: 20px;
+        padding: 12px 30px;
+        font-size: 1.2rem;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+    .hero h1 { font-size: 2.5rem; }
+    .actions { flex-direction: column; }
+}
